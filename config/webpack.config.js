@@ -1,10 +1,12 @@
+var webpack = require('webpack');
 module.exports = {
-  entry: [
-    './app/index.js'
-  ],
+  entry: {
+    app: './app/index',
+  },
   output: {
     path: __dirname + '/static/',
-    filename: 'bundle.js',
+    filename: "[name].js",
+    chunkFilename: "[id].chunk.js",
     publicPath: '/static/'
   },
   module: {

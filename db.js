@@ -1,8 +1,23 @@
 var mongoose = require( 'mongoose' );
 var Schema   = mongoose.Schema;
 
-//var Model = new Schema({
-//});
+var Board = new Schema({
+  name: { type: String, required: true },
+  description: String
+});
 
-//mongoose.model( 'Model', Model );
-mongoose.connect( 'mongodb://localhost/react-starter' );
+var List = new Schema({
+  name: { type: String, required: true },
+  boardId: { type: String, required: true }
+});
+
+var Card = new Schema({
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  listId: { type: String, required: true },
+});
+
+mongoose.model( 'Board', Board );
+mongoose.model( 'List', List );
+mongoose.model( 'Card', Card );
+mongoose.connect( 'mongodb://localhost/trello-clone' );
