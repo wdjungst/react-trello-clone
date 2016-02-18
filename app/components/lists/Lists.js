@@ -32,7 +32,7 @@ class Lists extends Component {
  }
  render() {
    let lists = this.state.lists.map( list => {
-     return(<List router={this.props.router} refresh={this.getLists} key={`list-${list._id}`} {...list} />);
+     return(<List refresh={this.getLists} key={`list-${list._id}`} {...list} />);
    });
    return (<div>
              <ListForm addList={this.addList} boardId={this.props.boardId} />

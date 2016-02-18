@@ -59,7 +59,7 @@ class Board extends Component {
               </div>
               <div className='card-action'>
                 <button className='btn' onClick={this.deleteBoard}>Delete</button>
-                <button onClick={() => this.props.router('board', {id: this.props._id})} className='btn'>Show</button>
+                <a href={`/boards/${this.props._id}`} className='btn'>Show</a>
               </div>
             </div>
           </div>);

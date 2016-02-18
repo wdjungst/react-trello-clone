@@ -1,5 +1,5 @@
 import React from 'react';
-import Lists from './lists/Lists';
+import Lists from '../components/lists/Lists';
 
 class BoardPage extends React.Component{
   constructor(props){
@@ -7,7 +7,7 @@ class BoardPage extends React.Component{
   }
   render() {
      return(<div>
-              <Lists router={this.props.router} boardId={this.props.id}/>
+              <Lists boardId={this.props.id}/>
             </div>);
   }
 }

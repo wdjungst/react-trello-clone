@@ -11,6 +11,10 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/:id', function(req, res, next) {
+  res.render('board', {id: req.params.id});
+});
+
 router.post('/', function(req, res, next) {
   new Board({
     name: req.body.name

@@ -12,6 +12,10 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/blah', function(req, res, next) {
+  res.render('list', {title: 'List'});
+});
+
 router.post('/', function(req, res, next) {
   new List({
     name: req.body.name,

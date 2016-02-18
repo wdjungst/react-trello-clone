@@ -2,6 +2,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: {
     app: './app/index',
+    board: './app/board'
   },
   output: {
     path: __dirname + '/static/',
