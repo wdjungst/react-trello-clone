@@ -20,4 +20,8 @@ var Card = new Schema({
 mongoose.model( 'Board', Board );
 mongoose.model( 'List', List );
 mongoose.model( 'Card', Card );
-mongoose.connect( 'mongodb://localhost/trello-clone' );
+var uristring =
+  process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/trello-clone';
+mongoose.connect(uristring);
